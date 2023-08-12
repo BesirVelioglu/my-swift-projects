@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Photo Album App" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1G-su-L14">
+                                <rect key="frame" x="60" y="187" width="248" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Tx-ZY-1L0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="manzara" translatesAutoresizingMaskIntoConstraints="NO" id="89g-Hl-2TR">
+                                <rect key="frame" x="60" y="187" width="248" height="308"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-Kg-ljk">
+                                <rect key="frame" x="101" y="470" width="166" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="7Zi-VB-x7K"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vif-aR-csm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="a1G-su-L14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="0Rg-t9-N5F"/>
+                            <constraint firstItem="a1G-su-L14" firstAttribute="trailing" secondItem="89g-Hl-2TR" secondAttribute="trailing" id="47k-3K-ogR"/>
+                            <constraint firstItem="89g-Hl-2TR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="148" id="8jB-qf-PTO"/>
+                            <constraint firstItem="89g-Hl-2TR" firstAttribute="centerX" secondItem="o3c-Kg-ljk" secondAttribute="centerX" id="Dbf-uV-7ir"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a1G-su-L14" secondAttribute="trailing" constant="63" id="IBF-F0-n7x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o3c-Kg-ljk" secondAttribute="bottom" constant="237" id="KOa-J2-uzB"/>
+                            <constraint firstItem="a1G-su-L14" firstAttribute="leading" secondItem="89g-Hl-2TR" secondAttribute="leading" id="NXB-ck-UCg"/>
+                            <constraint firstItem="a1G-su-L14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="gFG-hv-YTs"/>
+                            <constraint firstItem="o3c-Kg-ljk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="tp8-fB-FFM"/>
+                            <constraint firstItem="o3c-Kg-ljk" firstAttribute="top" secondItem="89g-Hl-2TR" secondAttribute="bottom" constant="8" id="vpZ-Mi-zjc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="89g-Hl-2TR" id="Nf5-U8-sxK"/>
+                        <outlet property="photoLabel" destination="a1G-su-L14" id="rY5-05-vYd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.153846153846153" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="manzara" width="2048" height="1536"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
